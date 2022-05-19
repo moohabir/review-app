@@ -1,23 +1,33 @@
 import { useState } from "react";
-import data from "./data"
+import { FaChevronRight, FaChevronLeft } from "react-icons";
+import data from "./data";
 
 export default function Review() {
-  const [people, setPeople] = useState(data),
+  const [people, setPeople] = useState(data);
 
   return (
-    <div className="App">
+    <div className="review">
       {people.map((person) => {
-        const {id, name, info, image} = person,
-        return <article key= {id} {...person}>
-           <img src ={image} alt = {name} />
-           <div>
-             <h4>{name}</h4>
-             <p>{info}</p>
-           </div>
-        </article>
+        const { id, name, info, image } = person;
+        return (
+          <article key={id} {...person}>
+            <img src={image} alt={name} />
+            <div>
+              <h4>{name}</h4>
+              <p>{info}</p>
+            </div>
+          </article>
+        );
       })}
-      <h1>Review Componnet</h1>
-      
+      {/*<div>
+        <button>
+          <FaChevronLeft />
+        </button>
+        <button>
+          {" "}
+          <FaChevronRight />
+        </button>
+      </div> */}
     </div>
   );
 }
