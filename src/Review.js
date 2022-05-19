@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaChevronRight, FaChevronLeft } from "react-icons";
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import data from "./data";
 
 export default function Review() {
