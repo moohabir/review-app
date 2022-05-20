@@ -1,4 +1,15 @@
 .App {
   font-family: sans-serif;
   text-align: center;
+  background-color: khaki;
+}
+.articcle  {
+  background-color: indigo;
+  height: 90vh;
+  border-radius: 12px;
+  border: 1px solid green;
+}
+.image {
+  height: 40vh;
+  width: 40vh;
 }
