@@ -35,9 +35,11 @@ export default function Review() {
   }
 
   function randomInfo() {
-    let random = Math.floor(Math.random() * data.length);
-    setIndex(index[random]);
-    return limitNumber(random);
+    let randomNumber = Math.floor(Math.random() * data.length);
+    if (randomNumber === index) {
+      randomNumber = index + 1;
+    }
+    setIndex(limitNumber(randomNumber));
   }
 
   return (
